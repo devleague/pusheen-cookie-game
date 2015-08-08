@@ -43,10 +43,10 @@ window.onload = function (){
         setTimeout(pusheenEats, eatSpeed);
       }else if (cookies === 0) {
         if (myCookies > pusheenCookies){
-          result.innerHTML = "you won!";
+          result.innerHTML = "You've beat Pusheen in cookie eating!";
           isActive = false;
         } else {
-          result.innerHTML = "you lost!";
+          result.innerHTML = "Boo! Pusheen ate more cookies than you!";
           isActive = false;
         }
       }
