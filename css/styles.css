@@ -13,7 +13,7 @@ h1 {
   color: #4d2a0a;
 }
 
-p.score {
+p {
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -21,6 +21,10 @@ p.score {
 span {
   font-size: 2em;
   color: #e7b670;
+}
+
+#result {
+  margin-top: 2em;
 }
 
 #start, #getcookie {
