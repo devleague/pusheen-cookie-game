@@ -6,7 +6,6 @@ var pusheenCookies = 0;
 
 var isActive = false;
 
-
 window.onload = function (){
   var cookieCount = document.getElementById('cookies');
   var pusheenCount = document.getElementById('pusheencookies');
@@ -57,10 +56,8 @@ window.onload = function (){
           myCount.innerHTML = myCookies;
         };
     }, 100);
-
   }
 
-  // document.getElementById('start').onclick = startGame;
   document.getElementById('start').onclick = function (){
     if (!isActive){
       isActive = true;
