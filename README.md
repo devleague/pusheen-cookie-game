@@ -2,6 +2,8 @@
 
 Quick showcase project for Jr. Dev League students of the "Hack My Planet" course to show a small example of the use of Javascript.
 
+![Pusheen eats cookies!](/readme/screen.png?raw=true "Screenshot")
+
 ## Project technique timeline:
 
 1. setInterval was used initally to time Pusheens eating.

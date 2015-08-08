@@ -65,7 +65,7 @@ window.onload = function (){
   }//end start game
 
   function randomEatSpeed(){
-    var speed = Math.floor(Math.random()*5);
+    var speed = Math.floor(Math.random()*3);
     speed = speed * 100 + 100;
     eatSpeed = speed;
   }
