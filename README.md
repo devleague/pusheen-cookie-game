@@ -15,7 +15,3 @@ Quick showcase project for Jr. Dev League students of the "Hack My Planet" cours
 1. Find new ways to challenge user via Pusheen eat speed or button click rules.
 1. Add eating/score point sounds for every click.
 1. Animate some stuff.
-
-<p align="center">
-  <img />
-</p>
