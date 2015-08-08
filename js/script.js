@@ -6,6 +6,7 @@ var pusheenCookies = 0;
 
 var isActive = false;
 
+var eatSpeed = 0;
 
 window.onload = function (){
   var cookieCount = document.getElementById('cookies');
@@ -17,6 +18,7 @@ window.onload = function (){
   myCount.innerHTML = myCookies;
   pusheenCount.innerHTML = pusheenCookies;
 
+
   function startGame (){
     cookies = 100;
     pusheenCookies = 0;
@@ -27,43 +29,50 @@ window.onload = function (){
     myCount.innerHTML = myCookies;
     result.innerHTML = '';
 
-    var pusheenEats = window.setInterval(function (){
+    pusheenEats();
+
+    function pusheenEats(){
       if (cookies > 0){
-        if (pusheenCookies < 100){
-          pusheenCookies += 1;
-          cookies -= 1;
-        }
-      }
-      if (cookies === 0){
-        clearInterval(pusheenEats);
+        pusheenCookies += 1;
+        cookies -= 1;
+
+        pusheenCount.innerHTML = pusheenCookies;
+        cookieCount.innerHTML = cookies;
+
+        setTimeout(pusheenEats, eatSpeed);
+      }else if (cookies === 0) {
         if (myCookies > pusheenCookies){
-          result.innerHTML = 'You\'ve Ate All The Cookies! Ya Fatteh!';
+          result.innerHTML = "you won!";
           isActive = false;
-        }else {
-          result.innerHTML = 'Boo! Pusheen beat you in cookie eating!!';
+        } else {
+          result.innerHTML = "you lost!";
           isActive = false;
         }
       }
-      cookieCount.innerHTML = cookies;
-      pusheenCount.innerHTML = pusheenCookies;
+    }
 
-      document.getElementById('getcookie').onclick =
-        function getCookie (){
-          if (cookies > 0){
-            cookies -= 1;
-            myCookies += 1;
-          }
-          cookieCount.innerHTML = cookies;
-          myCount.innerHTML = myCookies;
-        };
-    }, 100);
 
+    document.getElementById('getcookie').onclick =
+      function getCookie(){
+        if (cookies > 0){
+          cookies -= 1;
+          myCookies += 1;
+        }
+        cookieCount.innerHTML = cookies;
+        myCount.innerHTML = myCookies;
+      };
+  }//end start game
+
+  function randomEatSpeed(){
+    var speed = Math.floor(Math.random()*5);
+    speed = speed * 200;
+    eatSpeed = speed;
   }
 
-  // document.getElementById('start').onclick = startGame;
   document.getElementById('start').onclick = function (){
     if (!isActive){
       isActive = true;
+      randomEatSpeed();
       startGame();
     }
     return null;
