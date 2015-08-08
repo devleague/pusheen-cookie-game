@@ -29,6 +29,7 @@ window.onload = function (){
     myCount.innerHTML = myCookies;
     result.innerHTML = '';
 
+    console.log(eatSpeed);
     pusheenEats();
 
     function pusheenEats(){
@@ -65,7 +66,7 @@ window.onload = function (){
 
   function randomEatSpeed(){
     var speed = Math.floor(Math.random()*5);
-    speed = speed * 200;
+    speed = speed * 100 + 100;
     eatSpeed = speed;
   }
 
