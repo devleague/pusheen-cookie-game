@@ -1,0 +1,36 @@
+.clear {
+  clear: both;
+}
+
+body {
+  text-align: center;
+  background-color: #fef2e6;
+  font-family: helvetica;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #4d2a0a;
+}
+
+p.score {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+span {
+  font-size: 2em;
+  color: #e7b670;
+}
+
+#start, #getcookie {
+  background-color: #ffb4c1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius:6px;
+  color: #fff9f3;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: 3px solid #4d2a0a;
+  padding: 8px;
+}

@@ -15,8 +15,7 @@ window.onload = function (){
   pusheenCount.innerHTML = pusheenCookies;
 
   document.getElementById('start').onclick =
-    function (){
-
+    function startGame (){
       var pusheenEats = window.setInterval(function (){
         if (cookies > 0){
           if (pusheenCookies < 100){
